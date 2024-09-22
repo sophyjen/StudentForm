@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+
+    <style>
+        h1{
+            color: blue;
+            font-weight: bolder;
+        }
+
+        .userform{
+            margin: auto;
+            width: 50%;
+            border:  2px solid black; 
+            padding: 10px;
+            border-radius: 12px;
+        }
+
+        table{
+            width: 50%;
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        td, th{
+            border:  2px solid black;              
+        }
+
+        .nameError, .ageError, .emailError, .genderError, .courseError{
+            color: blue;
+            display: none;
+        }
+
+        .btn{
+            background-color: rgb(243, 106, 106);
+            color: white;
+            padding: 10px;
+            border-radius: 30px;
+            border: solid rgb(243, 106, 106) 1px;
+            cursor: pointer;
+            width: 25%;
+            font-weight: bolder;
+        }
+
+        button{
+            background-color:rgba(244, 33, 33, 0.896);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: solid rgba(244, 33, 33, 0.896) 1px;
+            cursor: pointer;
+            margin: 5px;
+            font-weight: bolder;
+        }
+
+        @media screen and (min-width:1000px) {
+            .break{
+                display: none;
+            }
+        }
+
+       @media screen and (max-width:600px) {
+       
+        table{
+            width: 100%;
+        }
+
+        td{
+            font-size: 10px;             
+        }
+
+        button{
+            font-size: 10px;  
+        }        
+       }
+        
+    </style>
+</head>
+<body style="text-align: center; background-color:lightpink; margin-top: 10%;">
+
+    <!--Form Section-->
+    <section id="form">
+        <h1>Student Form</h1>
+        <form action="" class="userform" id="userform">
+
+            <label for="name">Name:</label>
+            <input type="text" placeholder="Name" id="name"><br class="break">
+            <span class="nameError">Name must contain only letter</span>
+            <br><br>
+            
+
+            <label for="age">Age:</label>
+            <input type="text" placeholder="Age" id="age"><br class="break">
+            <span class="ageError">Age must contain only number</span>
+            <br><br>
+
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Female">Female<br class="break">
+            <span class="genderError">Select any one option</span>
+            <br><br>
+
+            <label for="course">Course:</label>
+            <select id="course">
+                <option value=""></option>
+                <option value="Full Stack Developer">Full Stack Developer</option>
+                <option value="Python Programming">Python Programming</option>
+                <option value="Data Analyst">Data Analyst</option>
+            </select><br class="break">
+            <span class="courseError">Select any one course</span>
+            
+            <br><br>
+
+
+            <label for="email">Email:</label>
+            <input type="text" placeholder="Email" id="email"><br class="break">
+            <span class="emailError">Please provide valid gmail id</span>
+            <br><br>
+
+            <div><button class="btn" id="btn" type="submit" value="Save">Save</button></div>
+        </form>
+    </section>
+
+    <hr>
+
+    <!--Table Section-->
+    <section id="table">
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Course</th>
+                    <th>E-mail</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </section>
+
+
+<script src="./studentform.js">
+   
+</script>
+
+</body>
+</html>
